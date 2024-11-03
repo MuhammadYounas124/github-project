@@ -4,6 +4,11 @@ function App () {
 
   return ( 
     <>
+    <title>AdminLTE 3 | Log in</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"></link>
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css"></link>
+  <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css"></link>
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css"></link>
 <div className="login-box">
   <div className="login-logo">
     <a href="../../index2.html"><b>Admin</b>LTE</a>
