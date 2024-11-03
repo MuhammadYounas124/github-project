@@ -1,9 +1,11 @@
+"use strict";
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {}
   },
-  plugins: [],
-}
-
+  plugins: []
+};
+//# sourceMappingURL=tailwind.config.dev.js.map
