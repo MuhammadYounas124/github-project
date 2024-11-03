@@ -1,3 +1,4 @@
+on:push
 import './App.css'
 
 function App () {
