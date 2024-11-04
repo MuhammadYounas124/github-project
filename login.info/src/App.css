@@ -6,12 +6,22 @@
   background-color: #e3ebee;
 }
 .login-form {
-max-width:300px;
-padding: 40px;
-margin:auto;
-border: 1px solid #585656;
-border-radius: 5px;
-} 
+    padding: 40px;
+    margin: auto;
+    max-width: 400px; 
+    width: 100%;     /* makes form width responsive */
+    border: 1px solid #585656;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+@media (max-width: 768px) {
+  .login-form {
+      flex-direction: column;
+      padding: 20px; 
+        border-radius: 5px;
+  }
+}
 
 .login-form{
   text-align: center;
