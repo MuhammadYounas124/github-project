@@ -1,8 +1,8 @@
-import './App.css'
+import './dist/css/adminlte.css'
 function App() {
   return (
     <>
-  const myHTML = `<h1>Admin LTE</h1>`; const App = () =&gt; <div>
+   <div className="younas">
       <div className="login-box">
       <div className="login-logo">
         <a href="../../index2.html"><b>Admin</b>LTE</a>
