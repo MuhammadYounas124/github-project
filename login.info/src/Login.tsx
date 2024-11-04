@@ -14,7 +14,7 @@ const handleSubmit = (e: { preventDefault: () => void; }) => {
  return (
     <div>
         <div className="login-form">
-            <h2>Login Form</h2>
+            <h2>LOGIN FORM</h2>
             <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor='email'>Email:</label>
