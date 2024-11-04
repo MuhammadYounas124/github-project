@@ -1,4 +1,4 @@
-import './dist/css/adminlte.css'
+import './App.css'
 import {useState} from 'react';
 const Login = () => {
      // State to store email and passwords
@@ -13,8 +13,8 @@ const handleSubmit = (e: { preventDefault: () => void; }) => {
 
  return (
     <div>
-        <div className='login-form'>
-            <h2>login form</h2>
+        <div className="login-form">
+            <h2>Login Form</h2>
             <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor='email'>Email:</label>
