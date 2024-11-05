@@ -2,11 +2,14 @@
   max-width: 1450px;
   margin: 0 auto;
   padding: 43px;
-  text-align: center;
+  text-align: center !important;
+  position: relative;
   background-color: #e3ebee;
 }
+
 .login-form {
-  max-width: 700px; 
+  width: 100%; 
+  width: 700px;
   margin: auto;
   padding: 2rem;
   border: 1px solid #ccc;
@@ -16,9 +19,53 @@
 
 @media (max-width: 992px) {
   .login-form {
-      flex-direction: column;
       padding: 20px; 
-        border-radius: 5px;
+      border-radius: 5px;
+      width: 90%; 
+  }
+}
+
+@media (max-width: 768px) {
+  #root {
+    padding: 20px; 
+  }
+
+  .login-form {
+    width: 95%;
+    padding: 1rem; 
+  }
+
+  .login-form h2 {
+    font-size: 1.5rem; 
+  }
+
+  .login-form label {
+    font-size: 0.9rem; 
+  }
+
+  .login-form input {
+    padding: 0.4rem; 
+  }
+
+  .login-form button {
+    padding: 0.4rem; 
+  }
+}
+
+@media (max-width: 480px) {
+  .login-form {
+    padding: 1rem; /* Further reduce padding */
+    width: 100%; /* Full width on very small screens */
+  }
+
+  .login-form h2 {
+    font-size: 1.2rem; 
+  }
+
+  .login-form label,
+  .login-form input,
+  .login-form button {
+    font-size: 0.8rem; 
   }
 }
 
