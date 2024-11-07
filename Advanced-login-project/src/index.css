@@ -39,7 +39,7 @@
 
  @media (max-width:768px){
     .login-container{
-        padding: 1px;
+        padding: 20px;
         width: 100%;
     }
  }
@@ -63,6 +63,7 @@
     border:1px solid #D5CBFF;
     background: #F9F8FF;
     transition: 0.3s ease;
+    margin-bottom: 20px;
  }
 
  .social-login .social-button :hover{
@@ -70,34 +71,35 @@
     border-color: #8673dd;
  }
 
+
  .social-login.social-button.social-icon{
     padding:23px ;
  }
 
-
- .login-container .seperator{
-    margin: 1.5rem 0;
-    text-align: center;
-    position: relative;
- }
-
- .login-container .seperator span {
-    position: relative;
-    z-index: 1;
-    background: #fff;
-    padding: 0 0.9rem;
-    font-weight: 500;
-    font-size: 1.06rem; 
+ .login-container .seperator {
+   margin: 1.5rem 0;
+   text-align: center;
+   position: relative;
 }
- .login-container .seperator ::after{
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 50%;
-    width: 100%;
-    height: 1px;
-    background: #bfb3f2;
- }
+
+.login-container .seperator span {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  padding: 0 0.9rem;
+  font-weight: 500;
+  font-size: 1.06rem;
+}
+
+.login-container .seperator::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc; 
+}
 
  .login-form .input-wrapper{
     height: 54px;
