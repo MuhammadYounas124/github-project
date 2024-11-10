@@ -1,20 +1,31 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from "./pages/home";
+import { useState } from 'react';
+import Home from "./pages/Home";
+import Login from './login';
 
 const App = () => {
-  return (
-    <>
-    <Router>
-          <Routes>
-        <Route path="/home" element={<Home />} />
-      </Routes>
-        
-    </Router>
-    </>
-  );
-}
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  let element;
 
+  if (isLoggedIn) {
+    element = <Home setIsLoggedIn={setIsLoggedIn} />;
+  } else {
+    element = <Login setIsLoggedIn={setIsLoggedIn} />;
+  }
+
+  return (
+    <Router>
+      <div className="app">
+        <Routes>
+          <Route path="*" element={element} />
+        </Routes>
+      </div>
+    </Router>
+  );
+};
 
 export default App;
+
+
 
 
