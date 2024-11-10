@@ -1,3 +1,4 @@
+import {Route} from "./Route";
 const App = () => {
   return (
     <div className="login-container">
@@ -15,7 +16,7 @@ const App = () => {
       </div>
     </div>
    <p className="seperator"><span>or</span></p>
-
+<Route />
      <form action="#" className="login-form">
      <div className="input-wrapper">
          <input type="email" placeholder="Email address" className="input-field" required />
