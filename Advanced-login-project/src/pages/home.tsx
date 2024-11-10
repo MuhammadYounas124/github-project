@@ -1,4 +1,4 @@
-export const home = () => {
+export const Home = () => {
   return (
     <div>
       This is form component of home
@@ -6,4 +6,4 @@ export const home = () => {
   );
 }
 
-export default home
+export default Home;
