@@ -5,19 +5,19 @@ import Login from './login';
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  let element;
+  let path;
 
   if (isLoggedIn) {
-    element = <Home setIsLoggedIn={setIsLoggedIn} />;
+    path = <Home setIsLoggedIn={setIsLoggedIn} />;
   } else {
-    element = <Login setIsLoggedIn={setIsLoggedIn} />;
+    path = <Login setIsLoggedIn={setIsLoggedIn} />;
   }
 
   return (
     <Router>
       <div className="app">
         <Routes>
-          <Route path="*" element={element} />
+          <Route path="*" element={path} />
         </Routes>
       </div>
     </Router>
