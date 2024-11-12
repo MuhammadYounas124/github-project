@@ -22,11 +22,12 @@ body {
 }
 
 .login-container {
-  width: 410px;
+  width: 90%;
+  max-width: 410px;
   margin: 0 auto;
   border-radius: 8px;
-  padding: 32px 34px;
-  background: rgb(255, 255, 255);
+  padding: 32px 20px;
+  background: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -42,11 +43,32 @@ body {
     padding: 20px;
     width: 100%;
   }
+  .social-login .social-button {
+    font-size: 14px;
+    padding: 0.6rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 15px;
+  }
+  .form-title {
+    font-size: 1.2rem;
+  }
+  .login-form .input-wrapper {
+    height: 48px;
+  }
+  .login-form .login-button {
+    height: 48px;
+    font-size: 1rem;
+  }
 }
 
 .login-container .social-login {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .social-login .social-button {
@@ -173,17 +195,13 @@ body {
   text-decoration: underline;
 }
 
-
-
 .logout-button {
-  margin: 0;
+  margin: 0 auto;
+  display: flex;
   align-items: center;
   font-family: inherit;
   font-size: inherit;
-  margin-left: auto;
-  margin-right: auto;
   justify-content: center;
-  display: flex;
   height: 50px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -192,27 +210,32 @@ body {
   padding: 10px 20px;
   border-radius: 5px;
   margin-top: 20px;
-  width: 50%; 
+  width: 50%;
 }
 
 .logout-button:hover {
   background-color: #040404;
 }
 
-.logout-box {
-  width:400px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #000000;
-  padding-top: 20px;
-  padding-bottom: 20px;
+.welcome-text {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
- .logout-box-inner{
-   
-  width: 300px;
-  background-color: white;
-  margin-left: auto;
-  margin-right: auto;
-  
- }
+.logout-box {
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  align-items: center;
+  background-color: #f5d5d5;
+  padding: 20px;
+}
+
+.logout-box-inner {
+  width: 90%;
+  max-width: 300px;
+  background-color: rgb(242, 242, 242);
+  margin: 0 auto;
+}
+

@@ -1,23 +1,30 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
+import { SetStateAction, useState } from 'react';
 import Home from "./pages/Home";
 import Login from './login';
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  let path;
+  const [userEmail, setUserEmail] = useState(""); 
 
+  const handleLogin = (email: SetStateAction<string>) => {
+    setUserEmail(email);
+    setIsLoggedIn(true);  
+  };
+
+  let pathofApp;
+  
   if (isLoggedIn) {
-    path = <Home setIsLoggedIn={setIsLoggedIn} />;
+    pathofApp = <Home email={userEmail} setIsLoggedIn={setIsLoggedIn} />;
   } else {
-    path = <Login setIsLoggedIn={setIsLoggedIn} />;
+    pathofApp = <Login onLogin={handleLogin} />;
   }
 
   return (
     <Router>
       <div className="app">
         <Routes>
-          <Route path="*" element={path} />
+          <Route path="*" element={pathofApp} />
         </Routes>
       </div>
     </Router>
@@ -25,6 +32,8 @@ const App = () => {
 };
 
 export default App;
+
+
 
 
 

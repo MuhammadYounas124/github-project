@@ -1,20 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-// Define the type for the props
 interface LoginProps {
-  setIsLoggedIn: (value: boolean) => void;
+  onLogin: (email: string) => void; // Function to handle login with email
 }
 
-const Login: React.FC<LoginProps> = ({ setIsLoggedIn }) => {
+const Login: React.FC<LoginProps> = ({ onLogin }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   const handleLogin = (event: React.FormEvent) => {
     event.preventDefault();
-    // Simulate login success
-    setIsLoggedIn(true); // Updates the state in App.tsx to navigate to Home
+    onLogin(email); // Pass email back to App's handleLogin function
   };
 
   return (
     <div className="login-container">
       <h2 className="form-title">Log in with</h2>
+
       <div className="social-login">
         <button className="social-button">
           <img src="https://img.icons8.com/color/48/google-logo.png" alt="google-logo" className="social-icon" />
@@ -30,12 +32,26 @@ const Login: React.FC<LoginProps> = ({ setIsLoggedIn }) => {
 
       <form onSubmit={handleLogin} className="login-form">
         <div className="input-wrapper">
-          <input type="email" placeholder="Email address" className="input-field" required />
+          <input
+            type="email"
+            placeholder="Email address"
+            className="input-field"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
           <i className="material-symbols-outlined">mail</i>
         </div>
 
         <div className="input-wrapper">
-          <input type="password" placeholder="Password" className="input-field" required />
+          <input
+            type="password"
+            placeholder="Password"
+            className="input-field"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
           <i className="material-symbols-outlined">lock</i>
         </div>
 
