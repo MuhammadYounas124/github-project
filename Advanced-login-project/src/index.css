@@ -224,8 +224,7 @@ body {
 }
 
 .logout-box {
-  width: 90%;
-  max-width: 400px;
+  width: 400px;
   margin: 0 auto;
   align-items: center;
   background-color: #f5d5d5;
